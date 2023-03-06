@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+    <script src="../build/Planner.js" defer></script>
+    <title>Budget Planner</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="menu">
+        <div class="element overview">
+          <h2>Overview</h2>
+          <p>Budget Planner</p>
+          <p>Current Balance: 2137 zł</p>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="addCashflow.html">Add new cashflow</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="#">Edit your categories</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="logs.html">Check logs</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="inclogs.html">Incoming cashflows</a>
+        </div>
+      </div>
+      <div class="page">
+        <div class="category">
+            <h2 class="header">Add new category</h2>
+            <div class="form">
+              <div class="test">
+                <form id="add-category">
+                    <select name="type">
+                      <option value="income">Income</option>
+                      <option value="expense">Expense</option>
+                    </select> <br />
+                    <label for="category">Category name:</label><br/>
+                    <input type="text" name="category" placeholder="Name"><br/>
+                    <label for="description">Category description:</label><br/>
+                    <input type="text" name="description" placeholder="Description"><br/>
+                    <div class="expense-properties">
+                      <label for="budget">Budget:</label><br/>
+                      <input type="number" name="budget" placeholder="Budget"><br/>
+                      <label for="priority">Priority</label><br/>
+                      <select name="priority">
+                          <option>low</option>
+                          <option>medium</option>
+                          <option>high</option>
+                      </select><br/>
+                    </div>
+                    <div class="submit">Submit</div>
+                </form>
+            </div>
+        </div>
+      <div class="categories"></div>
+      </div>
+    </div>
+  </body>
+</html>

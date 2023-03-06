@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+    <script src="../build/Planner.js" defer></script>
+    <title>Budget Planner</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="menu">
+        <div class="element overview">
+          <h2>Overview</h2>
+          <p>Budget Planner</p>
+          <p>Current Balance: 0 $</p>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="#">Add new cashflow</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="addCategory.html">Edit your categories</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="logs.html">Check logs</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="inclogs.html">Incoming cashflows</a>
+        </div>
+        <div class="line"></div>
+        <div class="element">
+          <a href="#">Daily balance shit</a>
+        </div>
+      </div>
+      <div class="page">
+        <div class="category">
+            <h2 class="header">Add new cashflow</h2>
+            <p class="error">Cannot add new cashflow, you can't afford it.</p>
+            <div class="test">
+                <form id="add-cashflow">
+                  <label for="type">Type:</label><br/>
+                  <select name="type">
+                      <option>Income</option>
+                      <option>Expense</option>
+                  </select><br/>
+                    <label for="cashflow">Name:</label><br/>
+                    <input type="text" name="cashflow" placeholder="Name"><br/>
+                    <label for="category">Category</label><br/>
+                    <select name="category"></select><br/>
+                    <label for="value">Value:</label><br/>
+                    <input type="number" name="value" placeholder="Value" min="0"><br/>
+                    <label for="date">Date:</label><br/>
+                    <input type="datetime-local" name="date"><br />
+                    <div class="submit">Submit</div>
+                </form>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
